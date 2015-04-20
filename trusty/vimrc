@@ -1,0 +1,42 @@
+"" display line numbers
+set number
+
+"" Set the status line as the second to last
+"" using 0 removes it completely
+set laststatus=2
+
+"" Status line formatting
+"" The params in order are:
+"" * Name of the file that I am editing
+"" * Format of the file that I am editing (DOS, Unix)
+"" * Filetype as recognized by Vim for the current file
+"" * ASCII and hex value of the character under the cursor
+"" * Position in the document as row and column number
+"" * Length of the file (line count)
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+
+"" Prevents vim from emulating vi bugs
+set nocompatible
+
+"" Jumps the cursor to the opening or closing brackets
+"" set showmatch
+
+"" Makes sure to show the status line
+set ruler
+
+"" Use the current tab for new lines 
+"" and tries to guess where to tab new lines
+set autoindent
+"" set smartindent
+
+"" Exapnd tabs into spaces
+set expandtab
+
+"" The number fo spaces for tabs
+set tabstop=4
+
+"" The number of spaces for shifts
+set shiftwidth=4
+
+"" Actively searches as you type
+set incsearch

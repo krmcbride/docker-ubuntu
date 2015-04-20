@@ -1,0 +1,15 @@
+[core]
+    quotepath = false
+    autocrlf = input
+[color]
+    ui = true
+[format]
+    pretty = %C(bold cyan)%h%Creset %s %C(dim yellow)<%an>%Creset %C(dim green)(%cr)%Creset
+[push]
+    default = nothing
+[alias]
+    latest = for-each-ref --sort=-committerdate refs/heads/ --format='%(refname:short) - %(committerdate:relative) by <%(authorname)>'
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    logr = log --format='%C(bold cyan)%h%Creset %s%C(magenta)%d%Creset %C(dim yellow)<%an>%Creset %C(dim green)(%cr)%Creset'
+
